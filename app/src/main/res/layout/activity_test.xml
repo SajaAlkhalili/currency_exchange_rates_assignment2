@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_background"
+            android:contentDescription="@string/design" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+
+                <EditText
+                    android:id="@+id/edtconfrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:autofillHints=""
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="@string/convert_from"
+
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:textColor="@color/purple"
+                    android:textColorHint="@color/purple" />
+
+
+                <Spinner
+                    android:id="@+id/spinfrom"
+                    android:layout_width="143dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:layout_marginRight="8dp"
+                    android:hint="@string/select_country"
+                    android:padding="8dp"
+                    android:textColor="@color/purple"
+                    android:textColorHint="@color/purple"
+                    app:layout_constraintStart_toEndOf="@+id/edtconfrom"
+                    tools:layout_editor_absoluteY="38dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txtconto"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:autofillHints=""
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="@string/convert_to"
+                    android:inputType="number"
+
+                    android:padding="8dp"
+                    android:textColor="@color/purple"
+                    android:textColorHint="@color/purple" />
+
+
+                <Spinner
+                    android:id="@+id/spinto"
+                    android:layout_width="137dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="8dp"
+                    android:autofillHints=""
+                    android:hint="@string/select_country"
+                    android:padding="8dp"
+                    android:textColor="@color/purple"
+                    android:textColorHint="@color/purple"
+                    app:layout_constraintStart_toEndOf="@+id/edtconto"
+                    tools:layout_editor_absoluteY="38dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnfind"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/button_background"
+                    android:text="Find"
+                    android:onClick="btnClick"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUrl"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/button_background"
+                    android:text="Another Url"
+                    android:onClick="btnClick"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+
+                    />
+</TableRow>
+        </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
