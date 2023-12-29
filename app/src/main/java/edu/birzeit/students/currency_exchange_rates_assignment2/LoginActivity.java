@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -87,5 +88,16 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "The entry does not match.please Enter the values again!!", Toast.LENGTH_SHORT).show();
             return;
         }
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        String email = edtEmail.getText().toString().trim();
+        String password = edtPassword.getText().toString().trim();
+        editor.putString("Email",email);
+        editor.putString("Password",password);
+
+        editor.apply();
     }
 }

@@ -42,6 +42,7 @@ public class SignupActivity extends AppCompatActivity {
                 signUp();
             }
         });
+
         loginTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,8 +78,21 @@ public class SignupActivity extends AppCompatActivity {
         editor.putString("Password2",password2);
         editor.apply();
         Log.d("Emai",email);
-    }
 
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("LC888","OnStart()");
+        String email = prefs.getString("Email", "");
+        String password = prefs.getString("Password", "");
+        String password2 = prefs.getString("Password2", "");
+        if(email!=null||password!=null||password2!=null) {
+            editTextEmail.setText(email);
+            editTextPassword.setText(password);
+            editTextPassword2.setText(password2);
+        }
+    }
 
     private void signUp() {
 
